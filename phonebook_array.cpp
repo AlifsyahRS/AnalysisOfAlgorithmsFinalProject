@@ -28,10 +28,11 @@ class PhoneDirectory {
                 phoneNumList[i] = "123";
                 N++;  
             }
-            */
+            
             nameList[N] = "yo";
             phoneNumList[N] = "456";
             N++;
+            */
             while (choice != 0){
                 cout << "\nPhone Directory" << endl;
                 cout << "Please select one of the following choices" << endl;

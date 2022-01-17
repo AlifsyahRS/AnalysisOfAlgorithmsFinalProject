@@ -41,7 +41,7 @@ class PhoneDirectory {
                 cout << "4. Show all contacts" << endl;
                 cout << "0. Exit program" << endl;
                 cin >> choice;
-                if (choice == 1){
+                if (choice == 1){ // Add contact
                     string name;
                     string phoneNum;
                     cout << "\nInput the name for your contact: ";
@@ -56,7 +56,7 @@ class PhoneDirectory {
                         addContact(name, phoneNum);
                     }
                     
-                } else if (choice == 2){                 
+                } else if (choice == 2){ // Search contact                 
                     if (N == 0){
                         cout << "\nYou currently have no contacts. Why not add some?" << endl;
                     } else {
@@ -70,7 +70,7 @@ class PhoneDirectory {
                             cout << nameList.at(searchResult) << "(" << phoneNumList.at(searchResult) << ")" << endl;
                         }
                     }
-                } else if (choice == 3){
+                } else if (choice == 3){ // Delete contact
                     if (N == 0){
                         cout << "\nYou currently have no contacts. Why not add some?" << endl;
                     } else {
@@ -84,7 +84,7 @@ class PhoneDirectory {
                             cout << "\nContact successfully deleted." << endl;
                         }
                     }
-                } else if (choice == 4){
+                } else if (choice == 4){ // Show all contacts
                     shellSort();
                     for(int i = 0; i < N; i++){
                         cout << nameList.at(i) << "(" << phoneNumList.at(i) << ")" << endl;
@@ -93,7 +93,7 @@ class PhoneDirectory {
             }
         }
 
-        void addContact (string name, string phoneNum){
+        void addContact (string name, string phoneNum){ // Function to add contact
             auto start = steady_clock::now();
             nameList.push_back(name);
             phoneNumList.push_back(phoneNum);
@@ -104,7 +104,7 @@ class PhoneDirectory {
             N++;
         }
 
-        int searchContact(string name){
+        int searchContact(string name){ // Function to search contacts
             auto start = steady_clock::now();            
             shellSort();
 

@@ -62,7 +62,7 @@ public:
     }
     
   
-    void createcontact(int size)
+    void createcontact(int size) // Function to add contact
     {
 
         cout << "\nInput ID for your contact : ";
@@ -72,7 +72,7 @@ public:
         cout << "\nInput number for your contact: ";
         cin >> t;
 
-        auto start = steady_clock::now();
+        auto start = steady_clock::now(); // Runtime measured using steady_clock()
         index = i % size;
         for (int j = 0; j < size; j++) {
             if (data[index].id == 0) {
@@ -87,10 +87,10 @@ public:
         }
         auto end = steady_clock::now();
         double elapsedTime = double(duration_cast<nanoseconds>(end-start).count());
-        cout << "Amount of time for insert: " << elapsedTime << " nanoseconds." << endl;
+        cout << "Amount of time for insert: " << elapsedTime << " nanoseconds." << endl; // Runtime broadcasted here.
     }
   
-    void searchcontact(int size)
+    void searchcontact(int size) // Function to search contacts
     {
 
         int index1, key, flag = 0;
@@ -124,7 +124,7 @@ public:
         cout << "\nAmount of time for search: " << elapsedTime << " nanoseconds." << endl;
     }
   
-    void deletecontact(int size)
+    void deletecontact(int size) // Function to delete contacts
     {
         int index1, key, flag = 0;
         
@@ -156,7 +156,7 @@ public:
     }
   
    
-    void displaycontact(int size)
+    void displaycontact(int size) // Show contacts
     {
         cout << "Contact list: " << endl;
         for (int a = 0; a < size; a++) {

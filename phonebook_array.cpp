@@ -42,7 +42,7 @@ class PhoneDirectory {
                 cout << "4. Show all contacts" << endl;
                 cout << "0. Exit program" << endl;
                 cin >> choice;
-                if (choice == 1){
+                if (choice == 1){ // Add contact
                     string name;
                     string phoneNum;
                     cout << "\nInput the name for your contact: ";
@@ -57,7 +57,7 @@ class PhoneDirectory {
                         addContact(name, phoneNum);
                     }
                     
-                } else if (choice == 2){                 
+                } else if (choice == 2){ // Search for contact                 
                     if (N == 0){
                         cout << "\nYou currently have no contacts. Why not add some?" << endl;
                     } else {
@@ -71,7 +71,7 @@ class PhoneDirectory {
                             cout << nameList[searchResult] << "(" << phoneNumList[searchResult] << ")" << endl;
                         }
                     }
-                } else if (choice == 3){
+                } else if (choice == 3){ // Delete contact
                     if (N == 0){
                         cout << "\nYou currently have no contacts. Why not add some?" << endl;
                     } else {
@@ -85,7 +85,7 @@ class PhoneDirectory {
                             cout << "\nContact successfully deleted." << endl;
                         }
                     }
-                } else if (choice == 4){
+                } else if (choice == 4){ // Show all contacts
                     shellSort();
                     for(int i = 0; i < N; i++){
                         cout << nameList[i] << "(" << phoneNumList[i] << ")" << endl;
@@ -94,14 +94,14 @@ class PhoneDirectory {
             }
         }
 
-        void addContact (string name, string phoneNum){
-            auto start = steady_clock::now();
+        void addContact (string name, string phoneNum){ // Function to add contacts
+            auto start = steady_clock::now(); // Using steady_clock to measure time complexity.
             nameList[N] = name;
             phoneNumList[N] = phoneNum;
             cout << "Contact successfully added" << endl;
             auto end = steady_clock::now();
             double elapsedTime = double(duration_cast<nanoseconds>(end-start).count());
-            cout << "Amount of time for insertion: " << elapsedTime << " nanoseconds." << endl;
+            cout << "Amount of time for insertion: " << elapsedTime << " nanoseconds." << endl; // Amount of time is displayed here
             N++;
         }
 

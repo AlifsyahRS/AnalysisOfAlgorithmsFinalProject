@@ -4,7 +4,7 @@
 using namespace std;
 using namespace std::chrono;
 
-bool isNumber(const string& s)
+bool isNumber(const string& s) // Checks if a string is a number
 {
     for (char const &ch : s) {
         if (std::isdigit(ch) == 0) 
@@ -28,12 +28,12 @@ class PhoneDirectory {
                 phoneNumList.push_back("123");
                 N++;  
             }
-            nameList.push_back("yo");
+            nameList.push_back("yo"); // Target value for search
             phoneNumList.push_back("456");
             N++;
             */
             while (choice != 0){
-                cout << "\nPhone Directory" << endl;
+                cout << "\nPhone Directory" << endl; // Showing options
                 cout << "Please select one of the following choices" << endl;
                 cout << "1. Add a new contact" << endl;
                 cout << "2. Search for contact" << endl;

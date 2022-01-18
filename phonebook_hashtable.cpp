@@ -50,7 +50,7 @@ public:
         for (int j = 0; j < 1001; j++) {
             if (data[index].id == 0) {
                 data[index].id = 25000;
-                data[index].name = "yo";
+                data[index].name = "yo"; // Target value for search
                 data[index].tel = 456;
                 break;
             }
@@ -181,7 +181,7 @@ int main()
     
     do
 	{
-		cout << "\nPhone Directory" << endl;
+		cout << "\nPhone Directory" << endl; // Showing options
         cout << "Please select one of the following choices" << endl;
         cout << "1. Add a new contact" << endl;
         cout << "2. Search for contact" << endl;
@@ -200,7 +200,7 @@ int main()
 			case '3':	s.deletecontact(size);;	break;
 			case '4':	s.displaycontact(size);	break;
 		}
-	} while (choice != '0' && choice != 'q');
+	} while (choice != '0' && choice != 'q'); // Program exits if 0 or q is typed
 
     return 0;
 }

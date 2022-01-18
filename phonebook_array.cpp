@@ -4,7 +4,7 @@
 using namespace std;
 using namespace std::chrono;
 
-bool isNumber(const string& s)
+bool isNumber(const string& s) // Checks if a string is a number
 {
     for (char const &ch : s) {
         if (std::isdigit(ch) == 0) 
@@ -17,7 +17,7 @@ bool isNumber(const string& s)
 class PhoneDirectory {
     private:
         string nameList[30000];
-        string phoneNumList[30000]; // Up to 30000 values. Program crashes when array size is too high
+        string phoneNumList[30000]; // Up to 30000 values. Program crashes when array size is too high. Adjust accordingly
         int N = 0;
         int choice = -1;
     public:
@@ -29,12 +29,12 @@ class PhoneDirectory {
                 N++;  
             }
             
-            nameList[N] = "yo";
+            nameList[N] = "yo"; // Target value for search
             phoneNumList[N] = "456";
             N++;
             */
             while (choice != 0){
-                cout << "\nPhone Directory" << endl;
+                cout << "\nPhone Directory" << endl; // Showing options
                 cout << "Please select one of the following choices" << endl;
                 cout << "1. Add a new contact" << endl;
                 cout << "2. Search for contact" << endl;
